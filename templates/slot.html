@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+
+	<table title="Projects" align="center">  
+		<tr>
+			<td style=""> slot1 </td> <td> slot2 </td> <td> slot3 </td>                    <!-- table column-->
+		</tr>
+		{% for row in data %}
+	    <tr border="1" bgcolor="lightblue" >
+	        {% for item in row %}
+	            {% if item == 0 %}
+	                <td style="background-color: gray; text-align: center; height: 200px; width:300px;"> -- </td>
+	            {% else %}
+	                <td style="text-align: center; height: 200px; width:300px;">Available</td>
+	            {% endif %}
+	        {% endfor %}
+	    </tr>
+	    {% endfor %}
+	    <tr>
+			<td> slot4 </td> <td> slot5 </td> <td> slot6 </td> 
+		</tr>
+	</table>
+
+	<form action="{{ url_for('logout') }}" method="POST">
+      <input type="submit" value="Logout">
+			</form>
+
+{% endblock %}

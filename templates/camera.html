@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+	<div id="firstDivistion" class="division" >
+    	<img src="{{ url_for('video_stream') }}" width="640" height="480">
+    </div>
+    <div id="secondDivistion" class="division" style="float: left; margin: 100px;">
+	   	<form action="" method="post">
+		   	<input type="submit" name="submit_button" value="Slot Details"/>
+    	</form>
+    </div>
+    
+ {% endblock %}
